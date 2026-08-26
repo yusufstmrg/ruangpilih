@@ -1,0 +1,47 @@
+{
+  "schema_version": "3.0",
+  "last_updated": "2026-08-26",
+  "products": [
+    {
+      "product_id": "rp-prod-dekkson-eth2000",
+      "brand": "DEKKSON",
+      "name": "Electric Towel Heater Smart Towel Dryer Rack",
+      "model": "ETH2000",
+      "category": "Home & Living",
+      "subcategories": ["Bathroom", "Home Appliances"],
+      "use_cases": ["mengeringkan handuk", "kamar mandi", "rumah", "apartemen"],
+      "problem_solved": "Membantu membuat pengeringan handuk lebih praktis setelah digunakan.",
+      "position": "Pilot recommendation",
+      "status": "PENDING_VERIFICATION",
+      "editorial_status": "PILOT",
+      "price": null,
+      "currency": "IDR",
+      "affiliate": {
+        "eligible": true,
+        "status": "PENDING_VERIFICATION",
+        "network": "Shopee",
+        "route": "https://s.shopee.co.id/5foG4dFwaX",
+        "publisher_page": "https://collshp.com/rupilih.id",
+        "disclosure_required": true
+      },
+      "signals": {
+        "fit": null,
+        "quality": null,
+        "trust": null,
+        "practical_proof": null,
+        "value": null,
+        "freshness": null
+      },
+      "claims": [
+        {"text": "Low Power Consumption", "evidence": "Product image supplied by founder", "confidence": "MEDIUM"},
+        {"text": "Adjustable Temperature", "evidence": "Product image supplied by founder", "confidence": "MEDIUM"},
+        {"text": "Adjustable Timer", "evidence": "Product image supplied by founder", "confidence": "MEDIUM"}
+      ],
+      "source_urls": [
+        "https://s.shopee.co.id/5foG4dFwaX",
+        "https://collshp.com/rupilih.id"
+      ],
+      "notes": "Pilot SKU. Product facts and live offer data must be re-verified before any publication that states current price, stock, rating or definitive technical specifications."
+    }
+  ]
+}
