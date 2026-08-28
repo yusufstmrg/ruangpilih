@@ -1,0 +1,15 @@
+{
+  "schema_version":"3.0",
+  "market":"ID",
+  "programs":[
+    {"id":"shopee-id","name":"Shopee","channel":"Marketplace","status":"PENDING_SETUP","requires":"Official affiliate/API/deep-link authorization"},
+    {"id":"tiktok-shop-id","name":"TikTok Shop / Tokopedia","channel":"Marketplace","status":"PENDING_SETUP","requires":"Official creator/affiliate tools or authorized integration"},
+    {"id":"lazada-id","name":"Lazada","channel":"Marketplace","status":"PENDING_SETUP","requires":"Official affiliate/deep-link authorization"},
+    {"id":"blibli-id","name":"Blibli","channel":"Marketplace","status":"PENDING_SETUP","requires":"Direct or network affiliate access"},
+    {"id":"accesstrade-id","name":"ACCESSTRADE","channel":"Affiliate Network","status":"PENDING_SETUP","requires":"Publisher account + approved offers"},
+    {"id":"involveasia","name":"Involve Asia","channel":"Affiliate Network","status":"PENDING_SETUP","requires":"Publisher account + API/tools where approved"},
+    {"id":"admitad","name":"Admitad","channel":"Affiliate Network","status":"PENDING_SETUP","requires":"Publisher account + approved programs"},
+    {"id":"impact","name":"impact.com","channel":"Affiliate Network","status":"PENDING_SETUP","requires":"Partner/affiliate account + approved programs"},
+    {"id":"direct-brand","name":"Direct Brands","channel":"Direct","status":"PENDING_SETUP","requires":"Direct partner agreement or approved affiliate program"}
+  ]
+}
