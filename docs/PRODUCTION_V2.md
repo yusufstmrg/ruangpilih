@@ -1,26 +1,43 @@
 # RuangPilih Production V2
 
-This release upgrades the public site from a static demo shell toward the Business Plan v2 architecture.
+This release upgrades the public site from a static demo shell toward the Business Plan v2 decision-intelligence architecture.
 
-## Implemented in this release
+## Implemented foundation
 - Premium RuangPilih visual system using the approved black/white/gold identity.
-- Product Intelligence data loaded from `/data/products.json` rather than hard-coded product cards.
+- Product Intelligence data model and database foundation on Neon PostgreSQL.
+- Public catalog API with database-first loading and safe static fallback.
 - Canonical category and guide seed data.
 - Search, category filters, product detail, save, compare, and telemetry flows.
-- AI Decision Assistant endpoint with a safe local fallback when no OpenAI key is configured.
-- Production health endpoint.
-- Event ingestion endpoint with server-runtime fallback.
-- Initial Admin OS command-center shell.
-- Multi-network affiliate registry for Indonesia-first launch.
-- Product Intelligence / Customer 360 / Affiliate Intelligence Supabase schema foundation.
-- Security headers, robots policy, and production SEO foundation.
+- Recommendation API with Gemini as the primary model and deterministic local fallback when AI credentials are unavailable.
+- Production health endpoint exposing database/auth/AI/affiliate readiness without leaking secrets.
+- Event ingestion endpoint with Neon persistence when configured and runtime-log fallback otherwise.
+- Initial Admin OS command-center foundation covering Product Intelligence, Affiliate Intelligence, Research, Analytics, Customer 360, Editorial, Partners/CRM, Connector Health, Recommendation Lab, Trust/Compliance, Settings, and Data Imports.
+- Multi-network affiliate registry with Shopee as the initial primary route and configurable fallback sequence.
+- Customer 360, CRM, analytics, evidence, research, compliance, campaign, partner, connector, audit, and recommendation schema foundations.
+- Neon Auth provisioned for future account, personalization, Saved/Wishlist, and Admin RBAC flows.
+- Security headers, robots policy, sitemap, JSON-LD, and production SEO foundation.
 
-## External gates still required
-- `ruangpilih.com` DNS and Vercel domain configuration.
-- Production Supabase project and secured environment variables.
-- Approved affiliate publisher/API credentials for each network.
-- Final legal/entity/contact content.
-- Production authentication and RBAC for Admin OS.
+## Affiliate routing policy
+1. Start with Shopee when an eligible, verified, healthy route exists.
+2. If Shopee is unavailable, materially unsuitable, stale, unverified, or otherwise fails the route policy, evaluate the next eligible marketplace/network.
+3. Marketplace routing is separate from product ranking. Commission cannot overrule user fit, quality, trust, practical proof, value, or freshness.
+4. Every commercial route must preserve affiliate disclosure and link-health status.
+
+## AI policy
+- Primary provider: Gemini API.
+- Recommended default model for complex recommendation reasoning: `gemini-2.5-pro`.
+- High-volume/low-latency future workloads can use `gemini-2.5-flash` where appropriate.
+- The AI may not invent price, stock, rating, reviews, specifications, tests, or evidence.
+- Verified Intelligence and Live Discovery remain separate modes.
+
+## External gates still required before full commercial launch
+- Primary domain `ruangpilih.com` configured in Vercel and DNS.
+- Defensive domain `ruangpilih.id` acquired and redirected to the primary domain.
+- Vercel `DATABASE_URL` and `NEON_AUTH_URL` configured as environment variables.
+- Gemini API key configured as a Vercel secret.
+- Official affiliate credentials/API/OAuth for Shopee and subsequent marketplaces/networks.
+- Final legal/entity/contact content and publication policies.
+- Admin authentication/RBAC verification in the production environment.
 - Authorized live-research connectors.
 
 ## Important trust rule
