@@ -20,3 +20,12 @@ jobs:
       - run: node --check api/route.js
       - run: node --check api/admin.js
       - run: node --check admin/admin.js
+      - name: Package full production source
+        run: |
+          mkdir -p dist
+          zip -r dist/RuangPilih_Full_Production_Package_${GITHUB_SHA::7}.zip . -x '.git/*' 'node_modules/*' 'dist/*'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ruangpilih-full-production-package
+          path: dist/RuangPilih_Full_Production_Package_*.zip
+          retention-days: 30
