@@ -22,8 +22,10 @@ jobs:
       - run: node --check admin/admin.js
       - name: Package full production source
         run: |
-          mkdir -p dist
-          zip -r dist/RuangPilih_Full_Production_Package_${GITHUB_SHA::7}.zip . -x '.git/*' 'node_modules/*' 'dist/*'
+          rm -rf package-stage dist
+          mkdir -p package-stage dist
+          rsync -a --exclude='.git' --exclude='node_modules' --exclude='dist' --exclude='package-stage' ./ package-stage/
+          zip -qr dist/RuangPilih_Full_Production_Package_${GITHUB_SHA::7}.zip package-stage
       - uses: actions/upload-artifact@v4
         with:
           name: ruangpilih-full-production-package
