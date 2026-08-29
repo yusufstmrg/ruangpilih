@@ -4,27 +4,126 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>RuangPilih — Helping You Choose with Confidence</title>
-<meta name="description" content="RuangPilih membantu kamu memahami kebutuhan, membandingkan pilihan, dan memilih produk, layanan, tools, serta solusi dengan lebih percaya diri.">
+<meta name="description" content="RuangPilih membantu kamu memahami kebutuhan, meneliti pilihan, membandingkan trade-off, dan memilih dengan lebih percaya diri.">
 <link rel="canonical" href="https://ruangpilih.com/">
-<meta property="og:type" content="website"><meta property="og:title" content="RuangPilih — Helping You Choose with Confidence"><meta property="og:description" content="Trusted recommendations for everyday life."><meta property="og:url" content="https://ruangpilih.com/">
+<meta property="og:type" content="website"><meta property="og:title" content="RuangPilih — Helping You Choose with Confidence"><meta property="og:description" content="Research-first recommendations for everyday decisions."><meta property="og:url" content="https://ruangpilih.com/">
 <link rel="icon" href="/assets/ruangpilih-mark.png"><link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"RuangPilih","url":"https://ruangpilih.com/","description":"Helping You Choose with Confidence","potentialAction":{"@type":"SearchAction","target":"https://ruangpilih.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
 </head>
 <body>
-<header class="nav"><div class="container navin"><a class="brand" href="#top" aria-label="RuangPilih"><img src="/assets/ruangpilih-logo.png" alt="RuangPilih"></a><nav><a href="#discover">Discover</a><a href="#categories">Kategori</a><a href="#guides">Guides</a><a href="#how">How it works</a><a href="#trust">Trust</a></nav><div class="nav-actions"><button class="icon-btn" id="openSearch" aria-label="Cari">⌕</button><a class="btn btn-dark btn-sm" href="/admin/">Admin</a><button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button></div></div><div class="mobile-nav hidden" id="mobileNav"><a href="#discover">Discover</a><a href="#categories">Kategori</a><a href="#guides">Guides</a><a href="#how">How it works</a><a href="#trust">Trust</a><a href="/admin/">Admin OS</a></div></header>
+<header class="nav">
+  <div class="container navin">
+    <a class="brand" href="#top" aria-label="RuangPilih"><img src="/assets/ruangpilih-logo.png" alt="RuangPilih"></a>
+    <nav aria-label="Primary">
+      <a href="#categories">Kategori</a><a href="#guides">Artikel</a><a href="#compareAnchor">Perbandingan</a><a href="#picks">Smart Picks</a><a href="#assistant">AI Assistant</a><a href="#trust">Trust</a>
+    </nav>
+    <div class="nav-search"><button id="openSearch" class="search-mini" aria-label="Cari">⌕ <span>Cari produk, kategori, atau kebutuhan…</span></button></div>
+    <div class="nav-actions"><a class="nav-admin" href="/admin/">Admin OS</a><button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button></div>
+  </div>
+  <div class="mobile-nav hidden" id="mobileNav"><a href="#categories">Kategori</a><a href="#guides">Artikel</a><a href="#compareAnchor">Perbandingan</a><a href="#picks">Smart Picks</a><a href="#assistant">AI Assistant</a><a href="#trust">Trust</a><a href="/admin/">Admin OS</a></div>
+</header>
+
 <main id="top">
-<section class="hero"><div class="container hero-grid"><div><div class="eyebrow">RuangPilih · Recommendation Intelligence</div><h1>Helping You Choose <span>with Confidence</span></h1><p class="lead">Bukan sekadar katalog. Ceritakan kebutuhanmu—RuangPilih membantu memahami intent, meneliti pilihan, menjelaskan trade-off, dan mengarahkanmu ke tempat terbaik untuk membeli.</p><form class="searchbar" id="heroForm"><input id="heroSearch" autocomplete="off" placeholder="Contoh: vacuum kecil untuk apartemen, budget 2 juta…" aria-label="Cari kebutuhan"><button class="btn btn-gold" type="submit">Temukan Pilihan</button></form><div class="suggestions"><button data-query="kamar mandi kecil">Kamar mandi kecil</button><button data-query="produk bayi aman">Produk bayi</button><button data-query="gadget untuk kerja">Gadget kerja</button><button data-query="alat rumah praktis">Life hacks</button></div><div class="promise-row"><span>Research-first</span><span>Evidence-led</span><span>Explainable</span><span>Affiliate-transparent</span></div></div><div class="hero-mark"><div class="glow"></div><img src="/assets/ruangpilih-mark.png" alt="RuangPilih"></div></div></section>
-<section id="discover" class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">Decision layer</div><h2>Mulai dari masalah, bukan dari produk.</h2></div><p>RuangPilih dirancang untuk bekerja dari kebutuhan natural-language, lalu mengubahnya menjadi shortlist yang dapat diperiksa.</p></div><div class="workflow"><div><b>01</b><h3>Tell us what you need</h3><p>Need, budget, use case, preference & constraints.</p></div><div><b>02</b><h3>Research & compare</h3><p>Structured product graph + permitted live discovery.</p></div><div><b>03</b><h3>Choose with confidence</h3><p>Why, trade-offs, trust signals and best available route.</p></div></div></div></section>
-<section id="categories" class="section soft"><div class="container"><div class="section-head"><div><div class="eyebrow">Explore</div><h2>Ruang untuk setiap kebutuhan.</h2></div><p>Satu master brand, lintas kategori. Kategori baru masuk berdasarkan demand, supply, editorial capability, monetization, serta trust/compliance.</p></div><div class="category-grid" id="categoryGrid"></div></div></section>
-<section id="picks" class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">Product Intelligence</div><h2>Smart Picks</h2><span id="picksCount" hidden></span></div><p>Produk ditampilkan bersama status verifikasi, use case, evidence, freshness dan commerce route.</p></div><div class="toolbar" id="toolbar"><button class="filter active" data-filter="all">Semua</button><button class="filter" data-filter="Home & Living">Home & Living</button><button class="filter" data-filter="Kitchen & Cooking">Kitchen</button><button class="filter" data-filter="Baby & Parenting">Baby</button><button class="filter" data-filter="Gadget & Electronics">Gadget</button><button class="filter" data-filter="AI & Software">AI & Software</button><button class="filter" data-filter="Services">Services</button></div><div class="product-grid" id="productGrid"></div></div></section>
-<section id="how" class="section dark-section"><div class="container split"><div><div class="eyebrow light">AI Decision Assistant</div><h2>“Saya butuh sesuatu yang…”</h2><p>AI membantu memetakan kebutuhan dan menyusun shortlist. Data terverifikasi tetap menjadi dasar; affiliate commission tidak boleh mengalahkan user-fit.</p><div class="method"><span>Fit 25%</span><span>Quality 25%</span><span>Trust 15%</span><span>Proof 10%</span><span>Value 15%</span><span>Freshness 10%</span></div></div><div class="ai-card"><textarea id="aiInput" placeholder="Contoh: Saya tinggal di kos, sering masak, budget 1,5 juta, ingin alat yang praktis dan awet."></textarea><button class="btn btn-gold" id="aiBtn">Buat Shortlist</button><div id="aiResult" class="ai-result" aria-live="polite"></div><small>Verified data → live research → evidence → scoring → recommendation</small></div></div></section>
-<section id="guides" class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">Research & Content</div><h2>Guides that help you decide.</h2></div><p>Problem-led content yang menjadi fondasi SEO, social commerce, comparisons dan smart finds.</p></div><div class="guide-grid" id="guideGrid"></div></div></section>
-<section id="trust" class="section soft"><div class="container"><div class="section-head"><div><div class="eyebrow">Trust Center</div><h2>Recommendation you can inspect.</h2></div><p>Klaim material harus punya sumber, timestamp, confidence, dan status. Tidak ada angka/ulasan/fakta live yang dibuat-buat.</p></div><div class="trust-grid"><article><b>Evidence-led</b><p>Claim → source → timestamp → confidence.</p></article><article><b>Transparent</b><p>Affiliate dan sponsorship selalu disclosed.</p></article><article><b>Explainable</b><p>Why, strengths, trade-offs, who should avoid.</p></article><article><b>Correctable</b><p>Update, correction dan feedback adalah bagian produk.</p></article></div></div></section>
+<section class="hero-shell">
+  <div class="container hero-grid">
+    <section class="hero-main">
+      <div class="hero-copy">
+        <span class="hero-badge">#1 Recommendation Platform for Indonesia</span>
+        <h1>Helping You Choose <span>with Confidence.</span></h1>
+        <p class="lead">Riset mendalam. Perbandingan jujur. Rekomendasi terbaik untuk setiap kebutuhan hidupmu.</p>
+        <form class="searchbar hero-search" id="heroForm">
+          <input id="heroSearch" autocomplete="off" placeholder="Cari produk, kategori, atau kebutuhan…" aria-label="Cari kebutuhan">
+          <button class="btn btn-gold" type="submit">Cari</button>
+        </form>
+        <div class="suggestions"><span>Trending:</span><button data-query="speaker bluetooth">Speaker Bluetooth</button><button data-query="air purifier">Air Purifier</button><button data-query="skincare">Skincare</button><button data-query="laptop">Laptop</button><button data-query="coffee maker">Coffee Maker</button></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="door-glow"></div><div class="door-frame"><div class="door left"><i></i></div><div class="door right"><i></i></div><div class="hero-check">✓</div><div class="door-floor"></div></div>
+      </div>
+      <div class="hero-benefits">
+        <article><div class="benefit-icon">✎</div><div><b>Riset Independen</b><span>Data-driven & unbiased</span></div></article>
+        <article><div class="benefit-icon">♜</div><div><b>Perbandingan Jujur</b><span>Pro & kontra transparan</span></div></article>
+        <article><div class="benefit-icon">✧</div><div><b>Rekomendasi Terbaik</b><span>Sesuai kebutuhanmu</span></div></article>
+        <article><div class="benefit-icon">◷</div><div><b>Hemat Waktu & Uang</b><span>Keputusan lebih yakin</span></div></article>
+      </div>
+    </section>
+
+    <aside class="hero-side">
+      <div class="side-block">
+        <div class="side-title">FITUR UNGGULAN PLATFORM</div>
+        <div class="feature-list">
+          <article><div class="feature-icon">●</div><div><b>AI Assistant</b><p>Tanya kebutuhanmu, dapatkan rekomendasi personal & perbandingan.</p></div></article>
+          <article><div class="feature-icon">▦</div><div><b>Perbandingan Produk</b><p>Bandingkan hingga 4 pilihan berdasarkan fit, quality, trust, value & freshness.</p></div></article>
+          <article><div class="feature-icon">⌁</div><div><b>Riset & Review Mendalam</b><p>Evidence-led research dengan sumber dan konteks yang dapat diperiksa.</p></div></article>
+          <article><div class="feature-icon">✦</div><div><b>Smart Picks</b><p>Kurasi pilihan terbaik untuk kebutuhan dan kategori yang relevan.</p></div></article>
+          <article><div class="feature-icon">□</div><div><b>Bookmark & List</b><p>Simpan pilihan saat kamu sedang membandingkan atau belum siap membeli.</p></div></article>
+          <article><div class="feature-icon">✓</div><div><b>Disclosure Transparan</b><p>Kami jelaskan affiliate relationship dan sponsorship dengan jelas.</p></div></article>
+        </div>
+      </div>
+      <div class="side-block compact-side">
+        <div class="side-title">RUANGPILIH DECISION MODEL</div>
+        <div class="score-row"><span>Fit</span><b>25%</b></div><div class="score-row"><span>Quality</span><b>25%</b></div><div class="score-row"><span>Trust</span><b>15%</b></div><div class="score-row"><span>Practical Proof</span><b>10%</b></div><div class="score-row"><span>Value</span><b>15%</b></div><div class="score-row"><span>Freshness</span><b>10%</b></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="categories" class="section dark-band">
+  <div class="container">
+    <div class="section-head light-head"><div><div class="eyebrow">Explore</div><h2>Kategori Populer</h2></div><a class="text-link" href="#categoriesAll">Lihat semua kategori →</a></div>
+    <div class="category-grid category-grid-feature" id="categoryGrid"></div>
+  </div>
+</section>
+
+<section id="picks" class="section dark-section-2">
+  <div class="container">
+    <div class="section-head light-head"><div><div class="eyebrow">Product Intelligence</div><h2>Smart Picks <span class="fire">✦</span></h2><p>Rekomendasi pilihan terbaik berdasarkan riset & data.</p></div><span id="picksCount" class="count-label"></span></div>
+    <div class="toolbar" id="toolbar"><button class="filter active" data-filter="all">Semua</button><button class="filter" data-filter="Home & Living">Home & Living</button><button class="filter" data-filter="Kitchen & Cooking">Kitchen</button><button class="filter" data-filter="Baby & Parenting">Baby</button><button class="filter" data-filter="Gadget & Electronics">Gadget</button><button class="filter" data-filter="AI & Software">AI & Software</button><button class="filter" data-filter="Services">Services</button></div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section id="assistant" class="section assistant-section">
+  <div class="container assistant-grid">
+    <div class="assistant-copy"><div class="eyebrow">AI Decision Assistant</div><h2>“Saya butuh sesuatu yang…”</h2><p>Ceritakan kebutuhanmu. RuangPilih memetakan intent, constraints dan trade-off, lalu menyusun shortlist yang mudah diperiksa.</p><div class="assistant-proof"><span>Need → research</span><span>Evidence → scoring</span><span>Recommendation → route</span></div></div>
+    <div class="ai-card"><textarea id="aiInput" placeholder="Contoh: Saya tinggal di kos, sering masak, budget 1,5 juta, ingin alat yang praktis dan awet."></textarea><button class="btn btn-gold" id="aiBtn">Buat Shortlist</button><div id="aiResult" class="ai-result" aria-live="polite"></div><small>AI bertindak sebagai decision assistant, bukan salesperson.</small></div>
+  </div>
+</section>
+
+<section id="compareAnchor" class="section compare-section">
+  <div class="container compare-grid">
+    <div><div class="eyebrow">Decision Support</div><h2>Bandingkan sebelum membeli.</h2><p>Pilih hingga 4 kandidat dan lihat perbedaan fit, use case, verification, evidence, serta commerce route.</p><button class="btn btn-dark" id="openCompare">Buka Perbandingan <span>→</span></button></div>
+    <div class="compare-preview"><div class="compare-line"><span>Fit</span><b>Use case</b><b>Trust</b></div><div class="compare-line muted-line"><span>Quality</span><b>Evidence</b><b>Freshness</b></div><div class="compare-note">Recommendation economics tidak boleh mengalahkan user-fit atau trust signals.</div></div>
+  </div>
+</section>
+
+<section id="guides" class="section dark-band">
+  <div class="container"><div class="section-head light-head"><div><div class="eyebrow">Research & Content</div><h2>Artikel & Buying Guides</h2></div><p>Problem-led content yang menjadi memory layer RuangPilih: guides, comparisons, reviews dan smart finds.</p></div><div class="guide-grid" id="guideGrid"></div></div>
+</section>
+
+<section id="categoriesAll" class="section category-all-section">
+  <div class="container"><div class="section-head"><div><div class="eyebrow">Full category architecture</div><h2>Ruang untuk setiap kebutuhan.</h2></div><p>Satu master brand, lintas kategori. Ekspansi mengikuti demand, supply, editorial capability, monetization, dan trust/compliance.</p></div><div class="category-cloud"><a href="#picks">Home & Living</a><a href="#picks">Kitchen & Cooking</a><a href="#picks">Baby & Parenting</a><a href="#picks">Gadget & Electronics</a><a href="#picks">Automotive</a><a href="#picks">Beauty & Personal Care</a><a href="#picks">Office & Productivity</a><a href="#picks">AI & Software</a><a href="#picks">Health & Wellness</a><a href="#picks">Travel</a><a href="#picks">Fashion</a><a href="#picks">Food & Grocery</a><a href="#picks">Education</a><a href="#picks">Tools & DIY</a><a href="#picks">Lifestyle</a><a href="#picks">Services</a></div></div>
+</section>
+
+<section id="trust" class="section trust-section">
+  <div class="container"><div class="section-head"><div><div class="eyebrow">Trust Center</div><h2>Recommendation you can inspect.</h2></div><p>Klaim material perlu source, timestamp, confidence dan status. Kami tidak akan mengisi angka, rating, atau fakta live yang tidak terverifikasi.</p></div><div class="trust-grid"><article><b>Evidence-led</b><p>Claim → source → timestamp → confidence.</p></article><article><b>Transparent</b><p>Affiliate dan sponsorship selalu disclosed.</p></article><article><b>Explainable</b><p>Why, strengths, trade-offs, who should avoid.</p></article><article><b>Correctable</b><p>Update, correction dan feedback adalah bagian produk.</p></article></div></div>
+</section>
 </main>
-<footer><div class="container footer-grid"><div><img src="/assets/ruangpilih-logo.png" alt="RuangPilih"><p>Helping You Choose with Confidence.</p></div><div><b>Explore</b><a href="#picks">Smart Picks</a><a href="#categories">Kategori</a><a href="#guides">Guides</a></div><div><b>Trust</b><a href="#trust">Trust Center</a><a href="#trust">Methodology</a><a href="#trust">Affiliate Disclosure</a></div><div><b>Platform</b><a href="/admin/">Admin OS</a><a href="#how">AI Decision Assistant</a></div></div><div class="container footer-bottom"><span>© 2026 RuangPilih</span><span>Indonesia's Most Trusted Recommendation Platform.</span></div></footer>
+
+<footer>
+  <div class="container footer-grid">
+    <div><img src="/assets/ruangpilih-logo.png" alt="RuangPilih"><p>Helping You Choose with Confidence.</p><span class="footer-note">Indonesia's Most Trusted Recommendation Platform.</span></div>
+    <div><b>Explore</b><a href="#picks">Smart Picks</a><a href="#categoriesAll">Kategori</a><a href="#guides">Guides</a></div>
+    <div><b>Trust</b><a href="#trust">Trust Center</a><a href="#trust">Methodology</a><a href="#trust">Affiliate Disclosure</a></div>
+    <div><b>Platform</b><a href="/admin/">Admin OS</a><a href="#assistant">AI Decision Assistant</a><a href="#compareAnchor">Comparison</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 RuangPilih</span><span>Research-first · Evidence-led · Explainable · Affiliate-transparent</span></div>
+</footer>
+
 <div class="overlay hidden" id="productOverlay"><div class="modal"><button class="close" data-close>×</button><div class="modal-top"><div><div class="eyebrow" id="modalMeta"></div><h2 id="modalTitle"></h2><p id="modalProblem"></p></div></div><div id="modalBody"></div><div class="modal-actions"><a id="modalBuy" class="btn btn-dark" href="#" target="_blank" rel="sponsored nofollow noopener">Lihat Pilihan Beli</a><button id="modalCompare" class="btn">Tambah ke Compare</button></div></div></div>
 <div class="overlay hidden" id="compareOverlay"><div class="modal wide"><button class="close" data-close>×</button><div class="eyebrow">Decision Support</div><h2>Compare</h2><div id="compareContent"></div></div></div>
 <div class="overlay hidden" id="searchOverlay"><div class="modal search-modal"><button class="close" data-close>×</button><div class="eyebrow">Search</div><h2>What are you looking for?</h2><form class="searchbar" id="searchForm"><input id="searchInput" placeholder="Ketik kebutuhan atau masalah…"><button class="btn btn-gold">Search</button></form></div></div>
-<div class="compare-bar hidden" id="compareBar"><span><b id="compareCount">0</b> pilihan</span><button class="btn btn-dark" id="openCompare">Bandingkan</button><button class="btn" id="clearCompare">Reset</button></div><div class="toast hidden" id="toast"></div>
+<div class="compare-bar hidden" id="compareBar"><span><b id="compareCount">0</b> pilihan</span><button class="btn btn-gold" id="openCompare">Bandingkan</button><button class="btn" id="clearCompare">Reset</button></div><div class="toast hidden" id="toast"></div>
 <script src="/app.js" defer></script>
-</body></html>
+</body>
+</html>
