@@ -1,4 +1,34 @@
-import fs from 'node:fs';import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+
 const read=p=>fs.readFileSync(new URL(`../${p}`,import.meta.url),'utf8');
-const html=read('index.html'),app=read('app.js'),css=read('style.css'),pkg=JSON.parse(read('package.json')),cats=read('data/categories.json'),guides=JSON.parse(read('data/guides.json')),products=JSON.parse(read('data/products.json'));
-assert.match(html,/Helping You Choose with Confidence/);assert.match(html,/FITUR UNGGULAN PLATFORM/);assert.match(html,/AI Decision Assistant/);assert.match(html,/Smart Picks/);assert.match(html,/openComparePreview/);assert.match(app,/api\/catalog/);assert.match(app,/api\/recommend/);assert.match(app,/api\/route/);assert.match(app,/category-cloud/);assert.match(css,/--gold/);assert.match(css,/hero-main/);assert.ok(pkg.dependencies['@neondatabase/serverless']);assert.ok(JSON.parse(cats).length>=10);assert.ok(guides.length>=3);assert.ok(products.products?.length>=1);console.log('RuangPilih production smoke tests passed');
+const html=read('index.html');
+const app=read('app.js');
+const css=read('style.css');
+const premiumCss=read('premium-mockup.css');
+const pkg=JSON.parse(read('package.json'));
+const cats=JSON.parse(read('data/categories.json'));
+const guides=JSON.parse(read('data/guides.json'));
+const products=JSON.parse(read('data/products.json'));
+
+assert.match(html,/Helping You Choose with Confidence/);
+assert.match(html,/RuangPilih/);
+assert.match(html,/AI Decision Assistant/);
+assert.match(html,/Smart Picks/);
+assert.match(html,/id="categoryGrid"/);
+assert.match(html,/id="productGrid"/);
+assert.match(html,/id="guideGrid"/);
+assert.match(html,/id="openCompare"/);
+assert.match(html,/premium-mockup\.css/);
+assert.match(app,/api\/catalog/);
+assert.match(app,/api\/recommend/);
+assert.match(app,/api\/route/);
+assert.match(app,/categoryUI/);
+assert.match(css,/--gold/);
+assert.match(css,/hero-shell|hero-main|hero/);
+assert.match(premiumCss,/hero-luxury/);
+assert.ok(pkg.dependencies['@neondatabase/serverless']);
+assert.ok(cats.length>=10);
+assert.ok(guides.length>=3);
+assert.ok(products.products?.length>=1);
+console.log('RuangPilih production smoke tests passed');
