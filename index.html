@@ -12,6 +12,7 @@
 <meta property="og:url" content="https://ruangpilih.com/">
 <link rel="icon" href="/assets/ruangpilih-mark.png">
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/premium-mockup.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"RuangPilih","url":"https://ruangpilih.com/","description":"Helping You Choose with Confidence","potentialAction":{"@type":"SearchAction","target":"https://ruangpilih.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
 </head>
 <body>
@@ -19,11 +20,11 @@
   <div class="container navin">
     <a class="brand" href="#top" aria-label="RuangPilih home"><img src="/assets/ruangpilih-logo.png" alt="RuangPilih"></a>
     <nav aria-label="Primary navigation">
-      <a href="#categories">Kategori</a><a href="#guides">Artikel</a><a href="#compare">Perbandingan</a><a href="#picks">Smart Picks</a><a href="#how">AI Assistant</a><a href="#trust">Trust</a>
+      <a href="#categories">Kategori</a><a href="#guides">Artikel</a><a href="#compare">Perbandingan</a><a href="#picks">Smart Picks</a><a href="#assistant-preview">AI Assistant</a><a href="#trust">Trust</a>
     </nav>
     <div class="nav-actions"><button class="icon-btn" id="openSearch" aria-label="Cari">⌕</button><a class="btn btn-outline btn-sm" href="/admin/">Admin OS</a><button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰</button></div>
   </div>
-  <div class="mobile-nav hidden" id="mobileNav"><a href="#categories">Kategori</a><a href="#guides">Artikel</a><a href="#compare">Perbandingan</a><a href="#picks">Smart Picks</a><a href="#how">AI Assistant</a><a href="#trust">Trust</a><a href="/admin/">Admin OS</a></div>
+  <div class="mobile-nav hidden" id="mobileNav"><a href="#categories">Kategori</a><a href="#guides">Artikel</a><a href="#compare">Perbandingan</a><a href="#picks">Smart Picks</a><a href="#assistant-preview">AI Assistant</a><a href="#trust">Trust</a><a href="/admin/">Admin OS</a></div>
 </header>
 
 <main id="top">
@@ -65,8 +66,8 @@
   </div>
 </section>
 
-<section class="section" id="compare">
-  <div class="container compare-preview"><div class="compare-copy"><div class="eyebrow">Decision Support</div><h2>Bandingkan sebelum membeli.</h2><p>Masukkan hingga 4 pilihan dan lihat faktor keputusan yang relevan: fit, quality, trust, value, proof, freshness.</p><button class="btn btn-dark" id="openCompare">Mulai dari Smart Picks</button></div><div class="compare-visual"><div class="compare-chip">1</div><div class="compare-chip">2</div><div class="compare-chip">3</div><div class="compare-chip">4</div><div class="compare-check">✓</div></div></div>
+<section class="section dark-band" id="compare">
+  <div class="container compare-preview"><div class="compare-copy"><div class="eyebrow light">Decision Support</div><h2>Bandingkan sebelum membeli.</h2><p>Masukkan hingga 4 pilihan dan lihat faktor keputusan yang relevan: fit, quality, trust, value, proof, freshness.</p><button class="btn btn-gold" id="openCompare">Mulai dari Smart Picks</button></div><div class="compare-visual"><div class="compare-chip">1</div><div class="compare-chip">2</div><div class="compare-chip">3</div><div class="compare-chip">4</div><div class="compare-check">✓</div></div></div>
 </section>
 
 <section class="section soft-section" id="guides">
@@ -85,17 +86,18 @@
 </section>
 
 <section class="section newsletter-section"><div class="container newsletter"><div><div class="eyebrow">Stay informed</div><h2>Temukan pilihan yang layak kamu pertimbangkan.</h2><p>Guides, smart finds dan recommendation insight — tanpa noise.</p></div><form class="newsletter-form" onsubmit="event.preventDefault(); toast('Terima kasih. Newsletter akan segera tersedia.');"><input type="email" aria-label="Email" placeholder="Masukkan email kamu…" required><button class="btn btn-gold">Subscribe</button></form></div></section>
-
 </main>
 <footer>
   <div class="container footer-grid"><div><img src="/assets/ruangpilih-logo.png" alt="RuangPilih"><p>Helping You Choose with Confidence.</p><small>Trusted recommendations for everyday life.</small></div><div><b>Explore</b><a href="#categories">Kategori</a><a href="#picks">Smart Picks</a><a href="#compare">Perbandingan</a><a href="#guides">Artikel</a></div><div><b>Trust</b><a href="#trust">Trust Center</a><a href="#trust">Methodology</a><a href="#trust">Affiliate Disclosure</a></div><div><b>Platform</b><a href="#assistant-preview">AI Assistant</a><a href="/admin/">Admin OS</a></div></div>
   <div class="container footer-bottom"><span>© 2026 RuangPilih</span><span>Indonesia's Most Trusted Recommendation Platform.</span></div>
 </footer>
-
 <div class="overlay hidden" id="productOverlay"><div class="modal"><button class="close" data-close aria-label="Tutup">×</button><div class="modal-top"><div><div class="eyebrow" id="modalMeta"></div><h2 id="modalTitle"></h2><p id="modalProblem"></p></div></div><div id="modalBody"></div><div class="modal-actions"><a id="modalBuy" class="btn btn-dark" href="#" target="_blank" rel="sponsored nofollow noopener">Lihat Pilihan Beli</a><button id="modalCompare" class="btn">Tambah ke Compare</button></div></div></div>
 <div class="overlay hidden" id="compareOverlay"><div class="modal wide"><button class="close" data-close aria-label="Tutup">×</button><div class="eyebrow">Decision Support</div><h2>Compare</h2><div id="compareContent"></div></div></div>
 <div class="overlay hidden" id="searchOverlay"><div class="modal search-modal"><button class="close" data-close aria-label="Tutup">×</button><div class="eyebrow">Search</div><h2>What are you looking for?</h2><form class="searchbar" id="searchForm"><input id="searchInput" placeholder="Ketik kebutuhan atau masalah…" aria-label="Search"><button class="btn btn-gold">Search</button></form></div></div>
-<div class="compare-bar hidden" id="compareBar"><span><b id="compareCount">0</b> pilihan</span><button class="btn btn-gold" id="openCompare">Bandingkan</button><button class="btn" id="clearCompare">Reset</button></div>
+<div class="compare-bar hidden" id="compareBar"><span><b id="compareCount">0</b> pilihan</span><button class="btn btn-gold compare-open-bar">Bandingkan</button><button class="btn" id="clearCompare">Reset</button></div>
 <div class="toast hidden" id="toast"></div>
 <script src="/app.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('.compare-open-bar');if(b){b.addEventListener('click',()=>document.querySelector('#compare .compare-copy button')?.click())}});
+</script>
 </body></html>
