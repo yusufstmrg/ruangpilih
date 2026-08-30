@@ -6,98 +6,305 @@
 <title>RuangPilih — Helping You Choose with Confidence</title>
 <meta name="description" content="RuangPilih membantu memahami kebutuhan, meneliti pilihan, membandingkan trade-off, dan menemukan pilihan terbaik dengan lebih percaya diri.">
 <link rel="canonical" href="https://ruangpilih.com/">
+<meta name="theme-color" content="#07101a">
 <meta property="og:type" content="website">
 <meta property="og:title" content="RuangPilih — Helping You Choose with Confidence">
 <meta property="og:description" content="Trusted recommendations for everyday life.">
 <meta property="og:url" content="https://ruangpilih.com/">
+<meta property="og:site_name" content="RuangPilih">
 <link rel="icon" href="/assets/ruangpilih-mark.png">
+<link rel="preload" as="image" href="/assets/ruangpilih-mark.png">
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/premium-mockup.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"RuangPilih","url":"https://ruangpilih.com/","description":"Helping You Choose with Confidence","potentialAction":{"@type":"SearchAction","target":"https://ruangpilih.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"RuangPilih","url":"https://ruangpilih.com/","description":"Helping You Choose with Confidence","potentialAction":{"@type":"SearchAction","target":"https://ruangpilih.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
 </head>
 <body>
 <header class="nav">
   <div class="container navin">
-    <a class="brand" href="#top" aria-label="RuangPilih home"><img src="/assets/ruangpilih-logo.png" alt="RuangPilih"></a>
+    <a class="brand" href="#top" aria-label="RuangPilih home">
+      <img src="/assets/ruangpilih-logo.png" alt="RuangPilih">
+    </a>
     <nav aria-label="Primary navigation">
-      <a href="#categories">Kategori</a><a href="#guides">Artikel</a><a href="#compare">Perbandingan</a><a href="#picks">Smart Picks</a><a href="#assistant-preview">AI Assistant</a><a href="#trust">Trust</a>
+      <a href="#categories">Kategori</a>
+      <a href="#picks">Smart Picks</a>
+      <a href="#compare">Perbandingan</a>
+      <a href="#guides">Artikel</a>
+      <a href="#assistant-preview">AI Assistant</a>
+      <a href="#trust">Trust Center</a>
     </nav>
-    <div class="nav-actions"><button class="icon-btn" id="openSearch" aria-label="Cari">⌕</button><a class="btn btn-outline btn-sm" href="/admin/">Admin OS</a><button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰</button></div>
+    <div class="nav-actions">
+      <button class="icon-btn" id="openSearch" aria-label="Buka pencarian">⌕</button>
+      <a class="btn btn-outline btn-sm" href="/admin/">Admin OS</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰</button>
+    </div>
   </div>
-  <div class="mobile-nav hidden" id="mobileNav"><a href="#categories">Kategori</a><a href="#guides">Artikel</a><a href="#compare">Perbandingan</a><a href="#picks">Smart Picks</a><a href="#assistant-preview">AI Assistant</a><a href="#trust">Trust</a><a href="/admin/">Admin OS</a></div>
+  <div class="mobile-nav hidden" id="mobileNav">
+    <a href="#categories">Kategori</a>
+    <a href="#picks">Smart Picks</a>
+    <a href="#compare">Perbandingan</a>
+    <a href="#guides">Artikel</a>
+    <a href="#assistant-preview">AI Assistant</a>
+    <a href="#trust">Trust Center</a>
+    <a href="/admin/">Admin OS</a>
+  </div>
 </header>
 
 <main id="top">
-<section class="hero hero-luxury">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <div class="hero-kicker">Recommendation Intelligence</div>
-      <h1>Helping You Choose <span>with Confidence</span></h1>
-      <p class="lead">Bukan sekadar katalog. Ceritakan kebutuhanmu — RuangPilih membantu memahami intent, meneliti pilihan, menjelaskan trade-off, dan mengarahkanmu ke pilihan terbaik.</p>
-      <form class="searchbar hero-search" id="heroForm"><input id="heroSearch" autocomplete="off" placeholder="Contoh: vacuum kecil untuk apartemen, budget 2 juta…" aria-label="Cari kebutuhan"><button class="btn btn-gold" type="submit">Cari</button></form>
-      <div class="suggestions"><button data-query="produk rumah praktis">Home & Living</button><button data-query="produk bayi aman">Baby</button><button data-query="gadget kerja">Gadget</button><button data-query="tools ai">AI Tools</button><button data-query="alat dapur praktis">Kitchen</button></div>
-      <div class="promise-row"><span>Research-first</span><span>Evidence-led</span><span>Explainable</span><span>Affiliate-transparent</span></div>
+<section class="hero">
+  <div class="container hero-shell">
+    <div class="hero-frame">
+      <div class="hero-main">
+        <div class="hero-copy">
+          <div class="hero-badge"><span class="badge-dot"></span> Recommendation Intelligence</div>
+          <h1>Helping You Choose <span>with Confidence.</span></h1>
+          <p class="lead">Ceritakan kebutuhanmu. RuangPilih membantu meneliti pilihan, membandingkan trade-off, dan menjelaskan mana yang paling layak dipertimbangkan.</p>
+          <form class="searchbar hero-search" id="heroForm">
+            <input id="heroSearch" autocomplete="off" placeholder="Contoh: vacuum kecil untuk apartemen, budget 2 juta…" aria-label="Cari kebutuhan">
+            <button class="btn btn-gold btn-search" type="submit">Temukan Pilihan</button>
+          </form>
+          <div class="suggestions">
+            <span>Mulai dari:</span>
+            <button data-query="produk rumah praktis">Home & Living</button>
+            <button data-query="produk bayi aman">Baby</button>
+            <button data-query="gadget kerja">Gadget</button>
+            <button data-query="tools ai">AI Tools</button>
+            <button data-query="alat dapur praktis">Kitchen</button>
+          </div>
+          <div class="promise-row" aria-label="RuangPilih principles">
+            <span>Research-first</span><span>Evidence-led</span><span>Explainable</span><span>Affiliate-transparent</span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="door-glow"></div>
+          <img src="/assets/ruangpilih-mark.png" alt="RuangPilih golden doorway and checkmark" loading="eager">
+          <div class="hero-art-caption"><strong>The room before the decision.</strong><span>Tempat untuk memahami pilihan sebelum membeli.</span></div>
+        </div>
+        <div class="hero-benefits">
+          <article><span class="benefit-icon">✦</span><div><b>Riset Independen</b><small>Fokus pada user fit, bukan komisi.</small></div></article>
+          <article><span class="benefit-icon">◈</span><div><b>Perbandingan Jujur</b><small>Pros, cons & trade-offs terbuka.</small></div></article>
+          <article><span class="benefit-icon">✓</span><div><b>Rekomendasi Terbaik</b><small>Disesuaikan dengan kebutuhan.</small></div></article>
+          <article><span class="benefit-icon">◷</span><div><b>Hemat Waktu & Uang</b><small>Lebih cepat menuju keputusan.</small></div></article>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="side-block">
+          <div class="side-title">Fitur Unggulan Platform</div>
+          <div class="feature-list">
+            <article><span class="feature-icon">AI</span><div><b>AI Decision Assistant</b><p>Tanya kebutuhanmu dan dapatkan shortlist personal.</p></div></article>
+            <article><span class="feature-icon">4</span><div><b>Perbandingan Produk</b><p>Bandingkan sampai 4 pilihan berdasarkan decision factors.</p></div></article>
+            <article><span class="feature-icon">◎</span><div><b>Riset & Evidence</b><p>Claim, source, timestamp, confidence dan trade-off.</p></div></article>
+            <article><span class="feature-icon">◆</span><div><b>Smart Picks</b><p>Kurasi berdasarkan fit, quality, trust, value & freshness.</p></div></article>
+            <article><span class="feature-icon">☆</span><div><b>Saved & Wishlist</b><p>Simpan pilihan untuk dipertimbangkan kembali.</p></div></article>
+            <article><span class="feature-icon">✓</span><div><b>Disclosure Transparan</b><p>Affiliate dan sponsorship selalu dijelaskan.</p></div></article>
+          </div>
+        </div>
+        <div class="side-block stack-block">
+          <div class="side-title">Intelligence Stack</div>
+          <div class="stack-grid">
+            <span><b>Next.js</b><small>Web / API</small></span>
+            <span><b>TypeScript</b><small>Application</small></span>
+            <span><b>Neon</b><small>PostgreSQL</small></span>
+            <span><b>Gemini</b><small>AI</small></span>
+            <span><b>Vercel</b><small>Cloud</small></span>
+            <span><b>Prisma</b><small>ORM</small></span>
+          </div>
+        </div>
+      </aside>
     </div>
-    <div class="hero-art"><div class="hero-glow"></div><img src="/assets/ruangpilih-mark.png" alt="RuangPilih doorway and checkmark" loading="eager"></div>
-  </div>
-  <div class="container value-strip">
-    <article><span class="value-icon">✦</span><div><b>Riset Independen</b><small>Data-driven & unbiased</small></div></article>
-    <article><span class="value-icon">◈</span><div><b>Perbandingan Jujur</b><small>Pros, cons & trade-offs</small></div></article>
-    <article><span class="value-icon">✓</span><div><b>Rekomendasi Terbaik</b><small>Sesuai kebutuhanmu</small></div></article>
-    <article><span class="value-icon">◷</span><div><b>Hemat Waktu & Uang</b><small>Keputusan lebih yakin</small></div></article>
   </div>
 </section>
 
 <section class="section dark-band" id="assistant-preview">
   <div class="container ai-layout">
-    <div><div class="eyebrow light">AI Decision Assistant</div><h2>“Saya butuh sesuatu yang…”</h2><p>Mulai dari kebutuhan, bukan nama produk. AI membantu menyusun shortlist, tetapi fakta material tetap harus ditopang data dan evidence.</p><div class="method"><span>Fit 25%</span><span>Quality 25%</span><span>Trust 15%</span><span>Proof 10%</span><span>Value 15%</span><span>Freshness 10%</span></div></div>
-    <div class="ai-card"><div class="ai-head"><div class="ai-avatar">AI</div><div><b>RuangPilih AI</b><small>Decision assistant</small></div><span class="ai-online">Online</span></div><textarea id="aiInput" placeholder="Contoh: Saya tinggal di kos, sering masak, budget 1,5 juta, ingin alat yang praktis dan awet."></textarea><button class="btn btn-gold" id="aiBtn">Buat Shortlist</button><div id="aiResult" class="ai-result" aria-live="polite"></div><small class="ai-note">Verified data → live discovery → evidence → scoring → recommendation</small></div>
+    <div class="ai-copy">
+      <div class="eyebrow light">AI Decision Assistant</div>
+      <h2>Mulai dari kebutuhan,<br><span>bukan dari merek.</span></h2>
+      <p>RuangPilih dirancang untuk memahami need, budget, preference, constraints dan use case sebelum menentukan kandidat.</p>
+      <div class="method">
+        <span>Fit <b>25%</b></span><span>Quality <b>25%</b></span><span>Trust <b>15%</b></span>
+        <span>Proof <b>10%</b></span><span>Value <b>15%</b></span><span>Freshness <b>10%</b></span>
+      </div>
+      <div class="mini-principles"><span>Evidence before certainty</span><span>Fit before commission</span><span>Explainable ranking</span></div>
+    </div>
+    <div class="ai-card">
+      <div class="ai-head">
+        <div class="ai-avatar">AI</div>
+        <div><b>RuangPilih AI</b><small>Decision assistant</small></div>
+        <span class="ai-online">● Ready for query</span>
+      </div>
+      <label class="sr-only" for="aiInput">Kebutuhan Anda</label>
+      <textarea id="aiInput" placeholder="Contoh: Saya tinggal di kos, sering masak, budget 1,5 juta, ingin alat yang praktis dan awet."></textarea>
+      <button class="btn btn-gold btn-block" id="aiBtn">Buat Shortlist</button>
+      <div id="aiResult" class="ai-result" aria-live="polite"></div>
+      <small class="ai-note">Verified data → live discovery → evidence → scoring → recommendation</small>
+    </div>
   </div>
 </section>
 
 <section class="section" id="categories">
-  <div class="container"><div class="section-head"><div><div class="eyebrow">Explore</div><h2>Ruang untuk setiap kebutuhan</h2></div><p>Satu master brand untuk kebutuhan sehari-hari: produk, layanan, software, tools, experience, dan solusi.</p></div><div class="category-grid" id="categoryGrid"></div></div>
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Explore</div><h2>Ruang untuk setiap kebutuhan</h2></div>
+      <p>Satu master brand untuk produk, layanan, software, tools, experience, dan solusi.</p>
+    </div>
+    <div class="category-grid" id="categoryGrid"></div>
+  </div>
 </section>
 
-<section class="section soft-section" id="picks">
-  <div class="container"><div class="section-head"><div><div class="eyebrow">Product Intelligence</div><h2>Smart Picks <span class="fire">◆</span></h2><span id="picksCount" class="visually-hidden"></span></div><p>Kurasi berbasis use case, evidence, freshness, trust dan commerce availability — bukan sekadar popularitas.</p></div>
-  <div class="toolbar" id="toolbar"><button class="filter active" data-filter="all">Semua</button><button class="filter" data-filter="Home & Living">Home & Living</button><button class="filter" data-filter="Kitchen & Cooking">Kitchen</button><button class="filter" data-filter="Baby & Parenting">Baby</button><button class="filter" data-filter="Gadget & Electronics">Gadget</button><button class="filter" data-filter="AI & Software">AI & Software</button><button class="filter" data-filter="Services">Services</button></div>
-  <div class="picks-layout"><div class="product-grid" id="productGrid"></div><aside class="decision-card"><div class="eyebrow">Need help choosing?</div><h3>Jangan mulai dari brand. Mulai dari kebutuhan.</h3><p>Masukkan masalahmu. Kami bantu menyusun criteria, shortlist dan trade-off.</p><button class="btn btn-gold" onclick="document.querySelector('#assistant-preview').scrollIntoView({behavior:'smooth'})">Tanya AI Assistant</button></aside></div>
+<section class="section light-section" id="picks">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Product Intelligence</div><h2>Smart Picks <span class="fire">◆</span></h2></div>
+      <p>Kurasi berbasis use case, evidence, freshness, trust dan commerce availability — bukan sekadar popularitas.</p>
+    </div>
+    <div class="toolbar" id="toolbar">
+      <button class="filter active" data-filter="all">Semua</button>
+      <button class="filter" data-filter="Home & Living">Home & Living</button>
+      <button class="filter" data-filter="Kitchen & Cooking">Kitchen</button>
+      <button class="filter" data-filter="Baby & Parenting">Baby</button>
+      <button class="filter" data-filter="Gadget & Electronics">Gadget</button>
+      <button class="filter" data-filter="AI & Software">AI & Software</button>
+      <button class="filter" data-filter="Services">Services</button>
+    </div>
+    <div class="picks-layout">
+      <div class="product-grid" id="productGrid"></div>
+      <aside class="decision-card">
+        <div class="eyebrow">Need help choosing?</div>
+        <h3>Jangan mulai dari brand. Mulai dari kebutuhan.</h3>
+        <p>Masukkan masalahmu dan biarkan decision engine menyusun kriteria, shortlist, dan trade-off yang relevan.</p>
+        <button class="btn btn-gold btn-block" onclick="document.querySelector('#assistant-preview').scrollIntoView({behavior:'smooth'})">Tanya AI Assistant</button>
+      </aside>
+    </div>
   </div>
 </section>
 
 <section class="section dark-band" id="compare">
-  <div class="container compare-preview"><div class="compare-copy"><div class="eyebrow light">Decision Support</div><h2>Bandingkan sebelum membeli.</h2><p>Masukkan hingga 4 pilihan dan lihat faktor keputusan yang relevan: fit, quality, trust, value, proof, freshness.</p><button class="btn btn-gold" id="openCompare">Mulai dari Smart Picks</button></div><div class="compare-visual"><div class="compare-chip">1</div><div class="compare-chip">2</div><div class="compare-chip">3</div><div class="compare-chip">4</div><div class="compare-check">✓</div></div></div>
-</section>
-
-<section class="section soft-section" id="guides">
-  <div class="container"><div class="section-head"><div><div class="eyebrow">Research & Content</div><h2>Guides that help you decide</h2></div><p>Problem-led content untuk SEO, social commerce, comparisons dan practical discovery.</p></div><div class="guide-grid" id="guideGrid"></div></div>
-</section>
-
-<section class="section dark-band trust-section" id="trust">
-  <div class="container"><div class="section-head"><div><div class="eyebrow light">Trust Center</div><h2>Recommendation you can inspect.</h2></div><p>Kami tidak menjual verdict. Kami menjelaskan dasar keputusan dan menunjukkan batas evidence.</p></div>
-  <div class="trust-grid"><article><span class="trust-icon">✓</span><b>Evidence-led</b><p>Claim → source → timestamp → confidence.</p></article><article><span class="trust-icon">$</span><b>Transparent</b><p>Affiliate dan sponsorship selalu disclosed.</p></article><article><span class="trust-icon">◫</span><b>Explainable</b><p>Why, strengths, trade-offs, who should avoid.</p></article><article><span class="trust-icon">↻</span><b>Correctable</b><p>Update, correction dan feedback adalah bagian produk.</p></article></div></div>
-</section>
-
-<section class="section platform-ecosystem">
-  <div class="container"><div class="section-head"><div><div class="eyebrow">Commerce Intelligence</div><h2>Connected to the marketplace ecosystem</h2></div><p>Shopee menjadi default commerce route pada fase awal. Connector lain aktif saat akun dan mekanisme resmi tersedia.</p></div>
-    <div class="partner-row"><span>Shopee</span><span>TikTok Shop</span><span>Tokopedia</span><span>Lazada</span><span>Blibli</span><span>ACCESSTRADE</span><span>Involve Asia</span><span>Admitad</span><span>impact.com</span><span>+ Direct Brands</span></div>
+  <div class="container compare-preview">
+    <div class="compare-copy">
+      <div class="eyebrow light">Decision Support</div>
+      <h2>Bandingkan sebelum membeli.</h2>
+      <p>Masukkan hingga 4 pilihan dan lihat faktor keputusan yang relevan: fit, quality, trust, value, proof dan freshness.</p>
+      <button class="btn btn-gold" id="openCompare">Buka Perbandingan</button>
+      <div class="compare-rule"><span>1</span><span>2</span><span>3</span><span>4</span><b>✓</b></div>
+    </div>
+    <div class="comparison-panel">
+      <div class="comparison-head"><span>Decision factors</span><span>Why it matters</span></div>
+      <div class="comparison-row"><b>User fit</b><span>Seberapa cocok dengan kebutuhanmu?</span></div>
+      <div class="comparison-row"><b>Quality</b><span>Apakah manfaatnya benar-benar terasa?</span></div>
+      <div class="comparison-row"><b>Trust</b><span>Seberapa kuat evidence dan reliability-nya?</span></div>
+      <div class="comparison-row"><b>Value</b><span>Apakah harga sebanding dengan hasil?</span></div>
+    </div>
   </div>
 </section>
 
-<section class="section newsletter-section"><div class="container newsletter"><div><div class="eyebrow">Stay informed</div><h2>Temukan pilihan yang layak kamu pertimbangkan.</h2><p>Guides, smart finds dan recommendation insight — tanpa noise.</p></div><form class="newsletter-form" onsubmit="event.preventDefault(); toast('Terima kasih. Newsletter akan segera tersedia.');"><input type="email" aria-label="Email" placeholder="Masukkan email kamu…" required><button class="btn btn-gold">Subscribe</button></form></div></section>
+<section class="section light-section" id="guides">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Research & Content</div><h2>Guides that help you decide.</h2></div>
+      <p>Problem-led content untuk search, social commerce dan practical discovery.</p>
+    </div>
+    <div class="guide-grid" id="guideGrid"></div>
+  </div>
+</section>
+
+<section class="section trust-section" id="trust">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow light">Trust Center</div><h2>Recommendation you can inspect.</h2></div>
+      <p>Kami tidak menjual verdict. Kami menjelaskan dasar keputusan dan menunjukkan batas evidence.</p>
+    </div>
+    <div class="trust-grid">
+      <article><span class="trust-icon">✓</span><b>Evidence-led</b><p>Claim → source → timestamp → confidence.</p></article>
+      <article><span class="trust-icon">₿</span><b>Transparent</b><p>Affiliate dan sponsorship selalu disclosed.</p></article>
+      <article><span class="trust-icon">◫</span><b>Explainable</b><p>Why, strengths, trade-offs, who should avoid.</p></article>
+      <article><span class="trust-icon">↻</span><b>Correctable</b><p>Update, correction dan feedback adalah bagian produk.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section ecosystem">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Commerce Intelligence</div><h2>Connected to the marketplace ecosystem.</h2></div>
+      <p>Shopee menjadi default commerce route pada fase awal. Connector lain aktif saat akun dan mekanisme resmi tersedia.</p>
+    </div>
+    <div class="partner-row">
+      <span class="partner-active">Shopee <small>Primary</small></span>
+      <span>TikTok Shop <small>Pending</small></span>
+      <span>Tokopedia <small>Pending</small></span>
+      <span>Lazada <small>Pending</small></span>
+      <span>Blibli <small>Pending</small></span>
+      <span>ACCESSTRADE <small>Pending</small></span>
+      <span>Involve Asia <small>Pending</small></span>
+      <span>Admitad <small>Pending</small></span>
+      <span>impact.com <small>Pending</small></span>
+      <span>Direct Brands <small>Future</small></span>
+    </div>
+  </div>
+</section>
+
+<section class="section newsletter-section">
+  <div class="container newsletter">
+    <div>
+      <div class="eyebrow">Stay informed</div>
+      <h2>Temukan pilihan yang layak kamu pertimbangkan.</h2>
+      <p>Guides, smart finds dan recommendation insight — tanpa noise.</p>
+    </div>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); toast('Terima kasih. Newsletter akan segera tersedia.');">
+      <input type="email" aria-label="Email" placeholder="Masukkan email kamu…" required>
+      <button class="btn btn-gold">Subscribe</button>
+    </form>
+  </div>
+</section>
 </main>
+
 <footer>
-  <div class="container footer-grid"><div><img src="/assets/ruangpilih-logo.png" alt="RuangPilih"><p>Helping You Choose with Confidence.</p><small>Trusted recommendations for everyday life.</small></div><div><b>Explore</b><a href="#categories">Kategori</a><a href="#picks">Smart Picks</a><a href="#compare">Perbandingan</a><a href="#guides">Artikel</a></div><div><b>Trust</b><a href="#trust">Trust Center</a><a href="#trust">Methodology</a><a href="#trust">Affiliate Disclosure</a></div><div><b>Platform</b><a href="#assistant-preview">AI Assistant</a><a href="/admin/">Admin OS</a></div></div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="/assets/ruangpilih-logo.png" alt="RuangPilih">
+      <p>Helping You Choose with Confidence.</p>
+      <small>Trusted recommendations for everyday life.</small>
+    </div>
+    <div><b>Explore</b><a href="#categories">Kategori</a><a href="#picks">Smart Picks</a><a href="#compare">Perbandingan</a><a href="#guides">Artikel</a></div>
+    <div><b>Trust</b><a href="#trust">Trust Center</a><a href="#trust">Methodology</a><a href="#trust">Affiliate Disclosure</a></div>
+    <div><b>Platform</b><a href="#assistant-preview">AI Assistant</a><a href="/admin/">Admin OS</a></div>
+  </div>
   <div class="container footer-bottom"><span>© 2026 RuangPilih</span><span>Indonesia's Most Trusted Recommendation Platform.</span></div>
 </footer>
-<div class="overlay hidden" id="productOverlay"><div class="modal"><button class="close" data-close aria-label="Tutup">×</button><div class="modal-top"><div><div class="eyebrow" id="modalMeta"></div><h2 id="modalTitle"></h2><p id="modalProblem"></p></div></div><div id="modalBody"></div><div class="modal-actions"><a id="modalBuy" class="btn btn-dark" href="#" target="_blank" rel="sponsored nofollow noopener">Lihat Pilihan Beli</a><button id="modalCompare" class="btn">Tambah ke Compare</button></div></div></div>
-<div class="overlay hidden" id="compareOverlay"><div class="modal wide"><button class="close" data-close aria-label="Tutup">×</button><div class="eyebrow">Decision Support</div><h2>Compare</h2><div id="compareContent"></div></div></div>
-<div class="overlay hidden" id="searchOverlay"><div class="modal search-modal"><button class="close" data-close aria-label="Tutup">×</button><div class="eyebrow">Search</div><h2>What are you looking for?</h2><form class="searchbar" id="searchForm"><input id="searchInput" placeholder="Ketik kebutuhan atau masalah…" aria-label="Search"><button class="btn btn-gold">Search</button></form></div></div>
-<div class="compare-bar hidden" id="compareBar"><span><b id="compareCount">0</b> pilihan</span><button class="btn btn-gold compare-open-bar">Bandingkan</button><button class="btn" id="clearCompare">Reset</button></div>
+
+<div class="overlay hidden" id="productOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="close" data-close aria-label="Tutup">×</button>
+    <div class="modal-top"><div><div class="eyebrow" id="modalMeta"></div><h2 id="modalTitle"></h2><p id="modalProblem"></p></div></div>
+    <div id="modalBody"></div>
+    <div class="modal-actions"><a id="modalBuy" class="btn btn-gold" href="#" target="_blank" rel="sponsored nofollow noopener">Lihat Pilihan Beli</a><button id="modalCompare" class="btn">Tambah ke Compare</button></div>
+  </div>
+</div>
+
+<div class="overlay hidden" id="compareOverlay" role="dialog" aria-modal="true">
+  <div class="modal wide">
+    <button class="close" data-close aria-label="Tutup">×</button>
+    <div class="eyebrow">Decision Support</div><h2>Compare choices</h2>
+    <div id="compareContent"></div>
+  </div>
+</div>
+
+<div class="overlay hidden" id="searchOverlay" role="dialog" aria-modal="true">
+  <div class="modal search-modal">
+    <button class="close" data-close aria-label="Tutup">×</button>
+    <div class="eyebrow">Search</div><h2>What are you looking for?</h2>
+    <form class="searchbar" id="searchForm"><input id="searchInput" placeholder="Ketik kebutuhan atau masalah…" aria-label="Search"><button class="btn btn-gold">Cari</button></form>
+  </div>
+</div>
+
+<div class="compare-bar hidden" id="compareBar">
+  <span><b id="compareCount">0</b> pilihan</span>
+  <button class="btn btn-gold compare-open-bar">Bandingkan</button>
+  <button class="btn" id="clearCompare">Reset</button>
+</div>
 <div class="toast hidden" id="toast"></div>
 <script src="/app.js" defer></script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('.compare-open-bar');if(b){b.addEventListener('click',()=>document.querySelector('#compare .compare-copy button')?.click())}});
-</script>
-</body></html>
+</body>
+</html>
